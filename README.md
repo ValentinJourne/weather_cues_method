@@ -23,22 +23,37 @@
 ## Overview
 
 The `weatheRcues` R code was developed to make comparison of weather
-cues method on biological data, here seed production data. It integrates
-existing R packages (e.g., `climwin`) alongside alternative approaches,
-including methods adapted from Simmonds et al. and Thackeray et al., now
-fully accessible through R code. This work is part of an ongoing study.
-**Disclaimer**, `weatheRcues` is not a formal R package, but rather a
-research compendium - organized with predefined files, folders
-structures, functions in order to support reproducible research. (Note
-that you can still install “it” as a package if you want to use the
-function for your own, please check the vignette below).
+cues method on biological data, here seed production data. The package
+integrates existing R packages (e.g., `climwin`) alongside alternative
+approaches, including methods adapted from Simmonds et al. and Thackeray
+et al., now fully accessible through this R code package. This work is
+part of an ongoing study (see here for more details
+<https://ecoevorxiv.org/repository/view/9420/>). **Disclaimer**,
+`weatheRcues` is not only a formal R package, but rather a research
+compendium - organized with predefined files, folders structures,
+functions in order to support reproducible research. All analysis are
+based on a study example on European beech tree (*Fagus sylvatica*) were
+we compared four methods to identify weather window of temperature
+related to seed production, and models accuracy (see Journé et al, for
+more details). Note also that you can still install “it” as a package if
+you want to use the function for your own, please check the **Get
+Started** section below.
 
 ## Features
 
 The main purpose of `weatheRcues` is to compare different methods to
 identify weather cues; i.e. what triggers or inhibitors of seed
 production. Feel free to adjust the code for other variable you would be
-interested in, such as tree ring data, phenological data, etc.
+interested in, such as tree ring data, phenological data, etc. We
+included for now 4 methods, based on the following general workflow.
+
+<figure>
+<img src="man/figures/Figure_flowchart.jpg"
+alt="Figure: Weather cue detection - general workflow of the methods included in this R package" />
+<figcaption aria-hidden="true"><strong>Figure</strong>: Weather cue
+detection - general workflow of the methods included in this R
+package</figcaption>
+</figure>
 
 ## Installation
 
