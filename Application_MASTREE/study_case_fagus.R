@@ -957,7 +957,7 @@ cowplot::save_plot(
 )
 
 ###################
-CSP.performance.plot = climwin.dd %>%
+cliwin.performance.plot = climwin.dd %>%
   dplyr::select(sitenewname, name, days.reversed) %>%
   pivot_wider(names_from = "name", values_from = "days.reversed") %>%
   left_join(methods.collection.mv2) %>%
@@ -981,7 +981,7 @@ CSP.performance.plot = climwin.dd %>%
       distinct()
   ) %>%
   mutate(
-    sitenewname = paste0(round(Latitude, 4), '_(N=', n, ")") #Country, "_",
+    sitenewname = paste0(round(Latitude, 4), ' (N=', n, ")") #Country, "_",
   ) %>%
   arrange(Collection_method) %>%
   mutate(
@@ -1016,29 +1016,29 @@ CSP.performance.plot = climwin.dd %>%
     panel.background = element_rect(fill = 'white', colour = 'white')
   ) +
   ylab('Days before seed fall (0 = Nov 1 of seed-fall year).')
-CSP.performance.plot
+cliwin.performance.plot
 
 cowplot::save_plot(
   here("Application_MASTREE/figures/averager2.method.png"),
   ((averagedensr2method +
     median.windows.plot) /
-    CSP.performance.plot) +
+    cliwin.performance.plot) +
     plot_annotation(tag_levels = 'a') &
     theme(plot.tag = element_text(size = 12)),
   ncol = 2.2,
-  nrow = 3.,
+  nrow = 3,
   dpi = 300
 )
 
 cowplot::save_plot(
   here::here("Application_MASTREE/figures/averager2.method.png"),
   ((averagedensr2method + median.windows.plot) /
-    CSP.performance.plot +
+    cliwin.performance.plot +
     plot_layout(heights = c(.7, 1))) + # <-- Adjust this ratio
     plot_annotation(tag_levels = 'a') &
     theme(plot.tag = element_text(size = 12)),
-  ncol = 2.2,
-  nrow = 3,
+  ncol = 2.1,
+  nrow = 2.9,
   dpi = 300
 )
 #################################################################
